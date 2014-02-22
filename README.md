@@ -12,7 +12,8 @@ Teknologiat
 ------------
 * **CreateJS**
  * http://createjs.com/
- * https://github.com/CreateJS/sandbox
- * http://code.createjs.com
+ * Esimerkkejä: https://github.com/CreateJS/sandbox
+ * CDN: http://code.createjs.com
+ * Dokumentaatiota: http://createjs.com/Docs/
 * **Box2dJS**
  * http://box2d-js.sourceforge.net
