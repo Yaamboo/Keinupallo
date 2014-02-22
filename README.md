@@ -1,7 +1,7 @@
 Keinupallo
 ==========
 
-Keinupallo on hieno peli. Täynnä rakkautta.
+Keinupallo on hieno peli.
 
 * http://createjs.com/
 * https://github.com/CreateJS/sandbox
