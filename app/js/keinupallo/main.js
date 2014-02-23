@@ -2,13 +2,32 @@
 
 	var OPTIONS = {
 		FPS : 20,
-		MOUSE_OVER_FREQUENZY : 20
+		MOUSE_OVER_FREQUENZY : 20,
+		AUDIO_PATH : "resources/sounds/"
 	}
 
+	function initSounds() {
+		var manifest = [
+			{id:"kameli", src:"kameli.ogg"},
+			{id:"karamalli", src:"karamalli.ogg"},
+			{id:"karvat", src:"karvat.ogg"},
+			{id:"muodot", src:"muodot.ogg"},
+			{id:"mursu", src:"mursu.ogg"},
+			{id:"kurvit", src:"kurvit.ogg"},
+			{id:"mursukameli", src:"mursukameli.ogg"},
+			{id:"salakameli", src:"salakameli.ogg"},
+			{id:"turska", src:"turska.ogg"}
+		];
+    	
+    	createjs.Sound.registerManifest(manifest, OPTIONS.AUDIO_PATH);
+	}
+
+	initSounds();
+	
 	function createCircle(i) {
 		var circle = new createjs.Shape();
 
-		var baseColor = "red",		
+		var baseColor = "red",
 			overColor = "#ABCDEF";
 
 		circle.x = 10+ 50*i;
@@ -85,5 +104,10 @@
 		createjs.Ticker.setFPS(OPTIONS.FPS);
 
 		stage.update();
+
+		$('button').click(function() {
+			if (!createjs.Sound.initializeDefaultPlugins()) { return; }
+			createjs.Sound.play($(this).attr('id'));
+		})
 	});
 }());
